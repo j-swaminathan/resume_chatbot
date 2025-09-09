@@ -1,0 +1,10 @@
+streamlit 
+faiss-cpu
+sentence-transformers 
+transformers 
+torch 
+torchvision 
+torchaudio 
+pypdf
+langchain 
+langchain-community
