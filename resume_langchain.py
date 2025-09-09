@@ -9,7 +9,7 @@
 # Quickstart (install):
 #   pip install streamlit langchain langchain-community faiss-cpu sentence-transformers transformers torch torchvision torchaudio pypdf
 # Run app:
-#   streamlit run streamlit_pdf_chatbot_langchain.py
+#   streamlit run resume_langchain.py
 # ---------------------------------------------------------------
 
 import streamlit as st
@@ -90,12 +90,12 @@ if st.button("📚 Index Document", use_container_width=True, type="primary"):
         with st.spinner("Processing document with LangChain..."):
             # Load PDF
             if uploaded_pdf is not None:
-    # Save uploaded file to a temp file
+            # Save uploaded file to a temp file
                 with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
                     tmp_file.write(uploaded_pdf.read())
                     tmp_path = tmp_file.name
 
-            loader = PyPDFLoader(tmp_path)  # Now it works
+            loader = PyPDFLoader(tmp_path) 
             docs = loader.load()
 
             # Split into chunks
